@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="th">
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="SWN Transport บริการขนส่งสินค้าทั่วประเทศ รวดเร็ว ปลอดภัย และติดตามสถานะได้ตลอดเส้นทาง">
+  <title>SWN Transport — รถรับจ้าง</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+
+
+  <style>
+    .logo-img {
+      height: 80px;
+      width: auto;
+      display: block;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .site-header {
+      background: #fff;
+      padding: 0;
+    }
+
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 100px;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .nav-menu a {
+      font-size: 16px;
+      font-weight: 600;
+      color: black;
+    }
+
+    .hero {
+      padding: 100px 0 0px;
+    }
+
+    .hero-section {
+      display: flex;
+      min-height: calc(100vh - 90px);
+    }
+
+    .top-bar {
+      background: #021F61;
+      color: white;
+      font-size: 12px;
+      padding: 15px;
+    }
+
+    a:hover {
+      color: #ffff;
+    }
+
+    .nav-menu a:hover {
+      color: #032C88;
+    }
+
+    /* LEFT */
+
+    .hero-left {
+      width: 50%;
+      /* background: #FE5B02; */
+      background: linear-gradient(135deg,
+          #021F61 0%,
+          #032C88 50%,
+          #0D56FF 100%);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 60px;
+    }
+
+    .hero-content {
+      max-width: 650px;
+      margin-top: 100px;
+
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: white;
+      color: #021F61;
+      text-align: center;
+      padding: 12px 25px;
+      border-radius: 50px;
+      margin-top: 70px;
+      font-weight: 700;
+
+      margin-bottom: 25px;
+    }
+
+    .hero-content h1 {
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 1.1;
+      text-align: center;
+      margin-bottom: 20px;
+
+      color: black;
+    }
+
+    .hero-content h1 span {
+      color: white;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      line-height: 1.8;
+
+      color: #222;
+
+      margin-bottom: 35px;
+    }
+
+    .btn-primary {
+      background: #032C88;
+      color: white;
+
+      text-decoration: none;
+
+      padding: 15px 30px;
+      border-radius: 10px;
+    }
+
+    .btn-outline {
+      border: 2px solid #032C88;
+      color: #032C88;
+
+      text-decoration: none;
+
+      padding: 15px 30px;
+      border-radius: 10px;
+    }
+
+    /* RIGHT */
+
+    .hero-right {
+      width: 50%;
+      background: #f8f8f8;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 40px;
+    }
+
+    .hero-right img {
+      width: 100%;
+      max-width: 850px;
+      height: auto;
+
+      display: block;
+    }
+
+    .nav-wrap {
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* สไตล์หลักของปุ่ม */
+    .contact-btn {
+      display: flex;
+      align-items: center;
+      background-color: #ededed;
+      border-radius: 50px;
+      padding: 10px 30px 10px 12px;
+      text-decoration: none;
+      color: #333;
+      min-width: 290px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .contact-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* วงกลมไอคอน */
+    .icon-circle {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 22px;
+      margin-right: 15px;
+      flex-shrink: 0;
+    }
+
+    /* ข้อความด้านใน */
+    .text-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .title-text {
+      font-size: 14px;
+      color: #7a7a7a;
+      font-weight: 300;
+      line-height: 1.3;
+    }
+
+    .main-text {
+      font-size: 18px;
+      color: #000000;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    /* สีเฉพาะของแต่ละปุ่มตามรูปภาพ */
+    .bg-phone {
+      background-color: #d68c29;
+    }
+
+    .bg-facebook {
+      background-color: #1877f2;
+    }
+
+    .bg-line {
+      background-color: #06c755;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .feature-card {
+      width: 100%;
+    }
+
+    .feature-image {
+      width: 100%;
+      height: 250px;
+      /* ปรับตามต้องการ */
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .bm {
+      position: relative;
+      background-image: url('./images/1605396.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+
+    }
+
+    .bm::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+
+      background: rgba(255, 255, 255, 0.60);
+      /* ยิ่งเยอะยิ่งจาง */
+      z-index: 1;
+    }
+
+    .bm .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* จัดการกล่องภายนอกให้เนื้อหาอยู่กึ่งกลาง */
+    .hero-budius {
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    /* ตั้งค่าให้รายการจัดเรียงแบบ Flexbox สลับแถวอัตโนมัติ */
+    .hero-budius ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px 20px;
+      /* ระยะห่างระหว่างปุ่ม (แนวตั้ง และ แนวนอน) */
+      max-width: 1000px;
+      /* จำกัดความกว้างเพื่อให้ปุ่มตัดขึ้นแถวใหม่คล้ายในรูป */
+      padding: 0;
+      margin: 0;
+    }
+
+    /* สไตล์ของตัวปุ่มแต่ละปุ่ม (ทำตามรูปแบบในภาพ) */
+    .hero-budius ul li {
+      color: #ffffff;
+      font-family: 'Kanit', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 10px 25px;
+
+      /* ทำปุ่มทรงมนโค้งแคปซูล */
+      border-radius: 50px;
+
+      /* เส้นขอบสีขาวบางๆ */
+      border: 1.5px solid rgba(255, 255, 255, 0.8);
+
+      /* พื้นหลังโปร่งแสงผสมสีขาวเล็กน้อยเพื่อให้กลืนกับพื้นหลังเขียว */
+      background-color: rgba(255, 255, 255, 0.12);
+
+      white-space: nowrap;
+      /* ป้องกันไม่ให้ข้อความในปุ่มตัดขึ้นบรรทัดใหม่ */
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    /* เอฟเฟกต์เวลาเอาเมาส์ไปชี้ (Hover) เพื่อความสวยงาม */
+    .hero-budius ul li:hover {
+      background-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-2px);
+    }
+
+    /* 1. ปรับขนาดตัวปุ่ม ลดความกว้างและ Padding ลง */
+    .contact-btn {
+      min-width: 240px !important;
+      /* ลดความกว้างของปุ่มลง (จากเดิมประมาณ 290px) */
+      padding: 6px 20px 6px 10px !important;
+      /* ลดช่องว่าง บน-ล่าง และ ซ้าย-ขวา ด้านในปุ่ม */
+      border-radius: 40px !important;
+      /* ปรับความโค้งมนให้เข้ากับขนาดปุ่มที่เล็กลง */
+    }
+
+    /* 2. ปรับขนาดวงกลมไอคอนให้เล็กลง */
+    .icon-circle {
+      width: 38px !important;
+      /* ลดขนาดวงกลมลง (จากเดิม 50px) */
+      height: 38px !important;
+      margin-right: 12px !important;
+      /* ลดระยะห่างระหว่างไอคอนกับตัวหนังสือ */
+    }
+
+    /* 3. บังคับให้รูปภาพไอคอนข้างในหดเล็กลงตามวงกลม */
+    .icon-circle img {
+      height: 100% !important;
+      /* ปรับให้ความสูงพอดีกับวงกลม 38px */
+      width: auto !important;
+      /* ปล่อยความกว้างให้คำนวณอัตโนมัติไม่ให้รูปเบี้ยว */
+      object-fit: contain;
+    }
+
+    /* 4. ปรับขนาดตัวหนังสือให้เล็กลงพอดีกับปุ่ม */
+    .title-text {
+      font-size: 11px !important;
+      /* ขนาดข้อความแถวบน เช่น "ติดต่อเรา คลิก" */
+    }
+
+    .main-text {
+      font-size: 15px !important;
+      /* ขนาดข้อความตัวหนาแถวล่าง เช่น เบอร์โทร/Line */
+    }
+
+    /* 5. จัดการระยะห่างของกลุ่มกล่องปุ่ม */
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      /* ระยะห่างระหว่างปุ่มโทรหลักกับปุ่ม Line */
+      justify-content: center;
+      /* จัดให้อยู่กึ่งกลางหน้าจอ */
+      flex-wrap: wrap;
+      /* รองรับหน้าจอมือถือให้ปุ่มตัดลงมาอัตโนมัติ */
+    }
+
+    .hero-buttons-center {
+      display: flex;
+      justify-content: center;
+      /* จัดให้ปุ่มสำรองอยู่กึ่งกลาง */
+      margin-top: -5px;
+      /* ขยับระยะห่างแนวตั้งระหว่างแถวให้ชิดกันสวยงามขึ้น */
+    }
+
+    .nav-menu a {
+      position: relative;
+      color: #333;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .nav-menu a.active {
+      color: #032C88;
+      font-weight: 600;
+    }
+
+    .nav-menu a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 3px;
+      background: #FE5B02;
+      border-radius: 10px;
+    }
+
+    /* **************************************************************************************************** */
+
+    @media (max-width: 991px) {
+
+      .hero-section {
+        flex-direction: column;
+      }
+
+      .hero-left,
+      .hero-right {
+        width: 100%;
+      }
+
+      .hero-left {
+        padding: 40px 25px;
+        text-align: center;
+      }
+
+      .hero-content h1 {
+        font-size: 42px;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .hero-buttons-center {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .hero-right {
+        padding: 30px;
+      }
+
+      .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: none;
+      }
+
+      .nav-menu {
+        position: absolute;
+        top: 70px;
+        right: 15px;
+
+        width: 220px;
+        background: #fff;
+
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
+
+        display: none;
+        flex-direction: column;
+
+        padding: 20px;
+      }
+
+      .nav-menu.active {
+        display: flex;
+      }
+
+      .nav-menu a {
+        padding: 10px 0;
+      }
+
+      .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+    @media (max-width: 576px) {
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="top-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <span>รถรับจ้าง ขนของย้ายบ้าน เสาวนีย์ขนส่ง</span>
+          </div>
+          <div class="col-md-6 text-end">
+            <span style="padding: 20px;"><a href="tel:0820216351"><img src="./images/call.png" style="    width: 15px;">
+                082-0216351</a></span>
+            <span><a href="https://lin.ee/PLEAkM5" target="_blank"><img src="./images/line.png" style="width: 15px;">
+                @909ksqmg</a></span>
+            <span style="padding: 20px;"><a href="tel:064-3294567"><img src="./images/call.png"
+                  style="    width: 15px;">
+                064-3294567</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container nav-wrap">
+      <a class="logo" href="#" aria-label="SCF Transport home">
+        <img src="./images/logo1.png" alt="SCF Transport Logo" class="logo-img">
+        <!-- <div class="line">
+          <span><a href="https://lin.ee/PLEAkM5" target="_blank"><img src="./images/line.png" style="width: 15px;">
+              @909ksqmg</a></span>
+        </div> -->
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="เปิดเมนู" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-menu" aria-label="เมนูหลัก">
+        <a href="#hero">หน้าหลัก</a>
+        <a href="#features">ประเภทรถรับจ้าง</a>
+        <a href="#workflow">ผลงานของเรา</a>
+        <a href="#contact">ติดต่อเรา</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section" id="hero">
+      <div class="hero-left">
+
+        <div class="hero-content" style="text-align: center;">
+          <span class="hero-badge">
+            SWN TRANSPORT
+          </span>
+
+          <h1>
+            <span>เสาวนีย์ขนส่ง รถรับจ้าง บริการรถรับจ้างทั่วไป รับขนย้ายสิ่งของ ย้ายที่พัก และขนย้ายออฟฟิศ</span>
+          </h1>
+
+          <div class="hero-budius">
+            <ul>
+              <li>กระบะ / ตู้ทึบ</li>
+              <li>กระบะ / คอก &amp; คอกเพลาลอย</li>
+              <li>4 ล้อ / ตู้จัมโบ้ &amp; 4 ล้อใหญ่</li>
+              <li>4 ล้อ / คอกจัมโบ้ &amp; 4 ล้อใหญ่</li>
+              <li>6 ล้อ / ตู้ สิบบาน &amp; เปิดข้าง</li>
+              <li>6 ล้อ / เจี๊ยบ &amp; เครนยก</li>
+              <li>10 ล้อ / คอก ผ้าใบ</li>
+              <li>เทเลอร์ / พื้นเรียบ</li>
+            </ul>
+          </div>
+
+          <div class="hero-buttons">
+            <a href="tel:0820216351" class="contact-btn">
+              <div class="icon-circle bg-phone">
+                <img src="./images/call.png" alt="Phone Icon" style="height: 50px;">
+              </div>
+              <div class="text-container">
+                <span class="title-text">ติดต่อเรา คลิก</span>
+                <span class="main-text">082-0216351</span>
+              </div>
+            </a>
+
+            <a href="https://lin.ee/PLEAkM5" target="_blank" class="contact-btn">
+              <div class="icon-circle bg-line">
+                <img src="./images/line.png" alt="Line Icon" style="height: 50px;">
+              </div>
+              <div class="text-container">
+                <span class="title-text">Line คลิก</span>
+                <span class="main-text">@909ksqmg</span>
+              </div>
+            </a>
+
+          </div>
+          <br>
+
+          <div class="hero-buttons-center">
+            <a href="tel:064-3294567" class="contact-btn">
+              <div class="icon-circle bg-phone">
+                <img src="./images/telephone1.png" alt="Phone Icon" style="height: 50px;">
+              </div>
+              <div class="text-container">
+                <span class="title-text">สำรอง คลิก</span>
+                <span class="main-text">064-3294567</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="hero-right">
+        <img src="./images/logo.png" alt="SWN Transport">
+      </div>
+    </section>
+
+    <!-- <section class="trusted">
+      <div class="container">
+        <p>รองรับการขนส่งหลากหลายอุตสาหกรรม</p>
+        <div class="logo-cloud"><span>RETAIL</span><span>FACTORY</span><span>E-COMMERCE</span><span>◆
+            FMCG</span><span>CONSTRUCTION</span></div>
+      </div>
+    </section> -->
+
+    <section class="section" id="features">
+      <div class="container">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div class="eyebrow" style="color: #FE5B02;"><span></span> บริการที่คุณไว้วางใจได้</div>
+            <h2>ประเภทรถรับจ้าง<br><em style="color: #032C88;">ขนของย้ายบ้าน</em></h2>
+            <diV style=" border: 2px solid #032C88; border-radius: 16px; padding: 24px;">
+              <p>
+                หากคุณลูกค้ากำลังวางแผนที่จะขนย้ายบ้าน ออฟฟิศ หรือขนย้ายอุปกรณ์สำนักงาน ไม่ว่าจะเป็นการย้ายบ้าน
+                ย้ายหอพัก ย้ายคอนโด ย้ายสำนักงาน หรือขนส่งสินค้าทั่วไป เรามีบริการรถรับจ้างหลากหลายประเภทให้เลือกใช้
+                ไม่ว่าจะเป็นรถกระบะคอก กระบะตู้ทึบ รถ 4 ล้อจัมโบ้ รถ 6 ล้อ รถ 10 ล้อ หรือรถเฮี๊ยบ
+                บริการของเราพร้อมให้คุณใช้ได้ตลอด 24 ชั่วโมง ไม่จำกัดเวลา
+                พร้อมทีมงานมืออาชีพในการขนย้ายสิ่งของที่ทำงานร่วมกันอย่างเป็นทีม
+                มีความชำนาญในงานขนย้ายและเส้นทางทั่วกรุงเทพและประเทศไทย ดำเนินงานมานานหลายสิบปี เปิดบริการทุกวัน 24
+                ชั่วโมง พร้อมให้บริการทั่วกรุงเทพและทั่วประเทศ</p>
+            </diV>
+
+          </div>
+          <div class="feature-grid">
+            <article class=" reveal">
+              <img src="./images/101837.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
+            </article>
+            <article class=" featured reveal delay-1">
+
+              <img src="./images/830593.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
+            </article>
+            <article class=" reveal delay-2">
+
+              <img src="./images/831409.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
+            </article>
+            <article class=" reveal delay-2">
+
+              <img src="./images/1605395.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
+            </article>
+            <article class=" reveal delay-2">
+
+              <img src="./images/1605396.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
+            </article>
+            <article class=" reveal delay-2">
+
+              <img src="./images/1605397.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bm" id="workflow">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="eyebrow" style="color: #FE5B02;"><span></span> บริการที่คุณไว้วางใจได้</div>
+          <h2>บริการรถรับจ้าง<br><em style="color: #032C88;">รถรับจ้างทั่วไป</em></h2>
+          <p>รับขนย้ายสิ่งของ ย้ายที่พัก และขนย้ายออฟฟิศ</p>
+        </div>
+        <div class="feature-grid">
+          <article class=" reveal">
+            <img src="./images/101837.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
+          </article>
+          <article class=" featured reveal delay-1">
+
+            <img src="./images/830593.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
+          </article>
+          <article class=" reveal delay-2">
+
+            <img src="./images/831409.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
+          </article>
+          <article class=" reveal delay-2">
+
+            <img src="./images/1605395.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
+          </article>
+          <article class=" reveal delay-2">
+
+            <img src="./images/1605396.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
+          </article>
+          <article class=" reveal delay-2">
+
+            <img src="./images/1605397.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-section">
+      <div class="container quote-card reveal">
+        <div class="quote-mark">“</div>
+        <blockquote>SCF Transport ดูแลการขนส่งของเราได้ตรงเวลาและเป็นมืออาชีพ ทีมงานติดตามงานรวดเร็ว
+          ทำให้เราวางแผนธุรกิจได้อย่างมั่นใจ</blockquote>
+        <div class="quote-person"><span>สก</span>
+          <div><strong>สมชาย เกียรติวัฒนา</strong><small>ผู้จัดการฝ่ายโลจิสติกส์</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pricing" id="pricing">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="eyebrow"><span></span> บริการที่เหมาะกับธุรกิจคุณ</div>
+          <h2>รองรับทุกความต้องการ<br>ด้านการขนส่ง</h2>
+          <p>ติดต่อทีมงานเพื่อประเมินราคาและวางแผนการขนส่งที่เหมาะสม</p>
+        </div>
+        <div class="pricing-grid">
+          <article class="price-card reveal">
+            <span class="plan">STANDARD DELIVERY</span>
+            <h3>รายเที่ยว</h3>
+            <p>สำหรับการจัดส่งทั่วไปและเที่ยวรถเฉพาะกิจ</p>
+            <a class="button button-outline" href="#contact">ขอประเมินราคา</a>
+            <ul>
+              <li>รถขนส่งหลายขนาด</li>
+              <li>ติดตามสถานะการจัดส่ง</li>
+              <li>หลักฐานยืนยันการส่งมอบ</li>
+            </ul>
+          </article>
+          <article class="price-card popular reveal delay-1">
+            <div class="popular-tag">สำหรับธุรกิจ</div><span class="plan">BUSINESS CONTRACT</span>
+            <h3>เหมารายเดือน</h3>
+            <p>สำหรับธุรกิจที่มีการขนส่งอย่างต่อเนื่อง</p>
+            <a class="button button-primary" href="#contact">ปรึกษาทีมงาน <span>→</span></a>
+            <ul>
+              <li>รถและพนักงานประจำโครงการ</li>
+              <li>วางแผนเส้นทางและรอบการจัดส่ง</li>
+              <li>รายงานและผู้ประสานงานเฉพาะ</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="contact">
+      <div class="container cta-card reveal">
+        <div><span class="eyebrow light"><span></span> พร้อมส่งสินค้าหรือยัง?</span>
+          <h2>ให้เราดูแล<br>ทุกเส้นทางของคุณ</h2>
+        </div>
+        <div>
+          <p>แจ้งรายละเอียดต้นทาง ปลายทาง และประเภทสินค้า ทีม SCF Transport พร้อมให้คำแนะนำและประเมินราคา</p><a
+            class="button button-light" href="mailto:contact@scftransport.com">ติดต่อ SCF Transport <span>→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div><a class="logo" href="#"><span class="logo-mark">S</span><span>SCF TRANSPORT</span></a>
+        <p>บริการขนส่งสินค้าทั่วประเทศ<br>รวดเร็ว ปลอดภัย และตรงเวลา</p>
+      </div>
+      <div><strong>บริการของเรา</strong><a href="#features">จุดเด่น</a><a href="#pricing">บริการขนส่ง</a><a
+          href="#workflow">ขั้นตอนบริการ</a></div>
+      <div><strong>บริษัท</strong><a href="#">เกี่ยวกับเรา</a><a href="#">ร่วมงานกับเรา</a><a href="#">ติดต่อเรา</a>
+      </div>
+      <div><strong>รับข่าวสารจากเรา</strong>
+        <p>ข่าวสารและข้อมูลด้านการขนส่ง ส่งตรงถึงคุณ</p>
+        <form><input type="email" placeholder="อีเมลของคุณ" aria-label="อีเมล"><button type="submit">→</button></form>
+      </div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 SCF Transport. All rights reserved.</span>
+      <div><a href="#">ความเป็นส่วนตัว</a><a href="#">เงื่อนไข</a></div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".nav-menu a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 120;
+      const sectionHeight = section.offsetHeight;
+
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+
+</html>
