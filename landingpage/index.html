@@ -428,6 +428,48 @@
       border-radius: 10px;
     }
 
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .feature-grid article {
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .feature-image {
+      width: 100%;
+      height: 160px;
+      /* ปรับได้ */
+      object-fit: cover;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .feature-image:hover {
+      transform: scale(1.05);
+    }
+
+    /* Tablet */
+    @media (max-width: 991px) {
+      .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 576px) {
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-image {
+        height: 200px;
+      }
+    }
+
     /* **************************************************************************************************** */
 
     @media (max-width: 991px) {
@@ -548,6 +590,7 @@
         <a href="#hero">หน้าหลัก</a>
         <a href="#features">ประเภทรถรับจ้าง</a>
         <a href="#workflow">ผลงานของเรา</a>
+        <a href="#about">เกี่ยวกับเรา</a>
         <a href="#contact">ติดต่อเรา</a>
       </nav>
     </div>
@@ -637,7 +680,9 @@
           <div class="section-heading reveal">
             <div class="eyebrow" style="color: #FE5B02;"><span></span> บริการที่คุณไว้วางใจได้</div>
             <h2>ประเภทรถรับจ้าง<br><em style="color: #032C88;">ขนของย้ายบ้าน</em></h2>
-            <diV style=" border: 2px solid #032C88; border-radius: 16px; padding: 24px;">
+            <hr
+              style="width: 80px; height: 4px; background: #FE5B02; border: none; margin: 15px auto 30px;  border-radius: 10px;">
+            <!-- <div style=" border: 2px solid #032C88; border-radius: 16px; padding: 24px;">
               <p>
                 หากคุณลูกค้ากำลังวางแผนที่จะขนย้ายบ้าน ออฟฟิศ หรือขนย้ายอุปกรณ์สำนักงาน ไม่ว่าจะเป็นการย้ายบ้าน
                 ย้ายหอพัก ย้ายคอนโด ย้ายสำนักงาน หรือขนส่งสินค้าทั่วไป เรามีบริการรถรับจ้างหลากหลายประเภทให้เลือกใช้
@@ -646,150 +691,303 @@
                 พร้อมทีมงานมืออาชีพในการขนย้ายสิ่งของที่ทำงานร่วมกันอย่างเป็นทีม
                 มีความชำนาญในงานขนย้ายและเส้นทางทั่วกรุงเทพและประเทศไทย ดำเนินงานมานานหลายสิบปี เปิดบริการทุกวัน 24
                 ชั่วโมง พร้อมให้บริการทั่วกรุงเทพและทั่วประเทศ</p>
-            </diV>
+            </diV> -->
 
           </div>
           <div class="feature-grid">
             <article class=" reveal">
-              <img src="./images/101837.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
+              <img src="./images/type_car/7 (1).png" alt="บริการขนส่งที่ครอบคลุม" class="feature-image"><br>
+              <p style="text-align: center;">รถกระบะ 4 ล้อ ตู้ทึบ</p>
             </article>
+
             <article class=" featured reveal delay-1">
-
-              <img src="./images/830593.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
+              <img src="./images/type_car/8 (1).png" alt="บริการขนส่งที่ครอบคลุม" class="feature-image"><br>
+              <p style="text-align: center;">รถกระบะ 4 ล้อ คอก</p>
             </article>
+
             <article class=" reveal delay-2">
-
-              <img src="./images/831409.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
+              <img src="./images/type_car/6 (1).png" alt="บริการขนส่งที่ครอบคลุม" class="feature-image"><br>
+              <p style="text-align: center;">รถ 4 ล้อ ตู้ทึบ</p>
             </article>
+
             <article class=" reveal delay-2">
-
-              <img src="./images/1605395.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
+              <img src="./images/type_car/1 (1).png" alt="บริการขนส่งที่ครอบคลุม" class="feature-image"><br>
+              <p style="text-align: center;">4 ล้อใหญ่ไม่ติดเวลา</p>
             </article>
+
             <article class=" reveal delay-2">
-
-              <img src="./images/1605396.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
+              <img src="./images/type_car/10 (1).png" alt="บริการขนส่งที่ครอบคลุม" class="feature-image"><br>
+              <p style="text-align: center;">6 ล้อ เปิดข้าง</p>
             </article>
+
             <article class=" reveal delay-2">
-
-              <img src="./images/1605397.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
+              <img src="./images/type_car/11 (1).png" alt="บริการขนส่งที่ครอบคลุม" class="feature-image"><br>
+              <p style="text-align: center;">6 ล้อคอก/ตู้ 10 บาน</p>
             </article>
+
+            <article class=" reveal delay-2">
+              <img src="./images/type_car/5 (1).png" alt="บริการขนส่งที่ครอบคลุม" class="feature-image"><br>
+              <p style="text-align: center;">6 ล้อตู้ทึบ/ตู้ 10 บาน</p>
+            </article>
+
+            <article class=" reveal delay-2">
+              <img src="./images/type_car/3 (1).png" alt="บริการขนส่งที่ครอบคลุม" class="feature-image"><br>
+              <p style="text-align: center;">6 ล้อ/เฮี๊ยบ & เครนยก</p>
+            </article>
+
+            <article class=" reveal delay-2">
+              <img src="./images/type_car/4 (1).png" alt="บริการขนส่งที่ครอบคลุม" class="feature-image"><br>
+              <p style="text-align: center;">10 ล้อ/พื้นเรียบ</p>
+            </article>
+
+            <article class=" reveal delay-2">
+              <img src="./images/type_car/12 (1).png" alt="บริการขนส่งที่ครอบคลุม" class="feature-image"><br>
+              <p style="text-align: center;">10 ล้อ/เฮี๊ยบ & เครนยก</p>
+            </article>
+
+            <article class=" reveal delay-2">
+              <img src="./images/type_car/2 (1).png" alt="บริการขนส่งที่ครอบคลุม" class="feature-image"><br>
+              <p style="text-align: center;">เทเลอร์/พื้นเรียบ</p>
+            </article>
+
           </div>
+          <br>
+
+          <div class="hero-buttons">
+            <a href="tel:0820216351" class="contact-btn">
+              <div class="icon-circle bg-phone">
+                <img src="./images/call.png" alt="Phone Icon" style="height: 50px;">
+              </div>
+              <div class="text-container">
+                <span class="title-text">ติดต่อเรา คลิก</span>
+                <span class="main-text">082-0216351</span>
+              </div>
+            </a>
+
+            <a href="https://lin.ee/PLEAkM5" target="_blank" class="contact-btn">
+              <div class="icon-circle bg-line">
+                <img src="./images/line.png" alt="Line Icon" style="height: 50px;">
+              </div>
+              <div class="text-container">
+                <span class="title-text">Line คลิก</span>
+                <span class="main-text">@909ksqmg</span>
+              </div>
+            </a>
+
+            <a href="tel:064-3294567" class="contact-btn">
+              <div class="icon-circle bg-phone">
+                <img src="./images/telephone1.png" alt="Phone Icon" style="height: 50px;">
+              </div>
+              <div class="text-container">
+                <span class="title-text">สำรอง คลิก</span>
+                <span class="main-text">064-3294567</span>
+              </div>
+            </a>
+
+          </div>
+
         </div>
       </div>
     </section>
 
     <section class="section bm" id="workflow">
       <div class="container">
-        <div class="section-heading reveal">
+        <div class="section-heading">
           <div class="eyebrow" style="color: #FE5B02;"><span></span> บริการที่คุณไว้วางใจได้</div>
-          <h2>บริการรถรับจ้าง<br><em style="color: #032C88;">รถรับจ้างทั่วไป</em></h2>
-          <p>รับขนย้ายสิ่งของ ย้ายที่พัก และขนย้ายออฟฟิศ</p>
+          <h2 style="color: #032C88;">ผลงานของเรา
+            <hr
+              style="width: 80px; height: 4px; background: #FE5B02; border: none; margin: 15px auto 30px;  border-radius: 10px;">
+          </h2>
+          <p style="color: #000000;">รับขนย้ายสิ่งของ ย้ายที่พัก และขนย้ายออฟฟิศ</p>
         </div>
         <div class="feature-grid">
           <article class=" reveal">
             <img src="./images/101837.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
           </article>
-          <article class=" featured reveal delay-1">
 
+          <article class=" featured reveal delay-1">
             <img src="./images/830593.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
           </article>
-          <article class=" reveal delay-2">
 
+          <article class=" reveal delay-2">
             <img src="./images/831409.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
           </article>
-          <article class=" reveal delay-2">
 
+          <article class=" reveal delay-2">
             <img src="./images/1605395.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
           </article>
-          <article class=" reveal delay-2">
 
+          <article class=" reveal delay-2">
             <img src="./images/1605396.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
           </article>
-          <article class=" reveal delay-2">
 
+          <article class=" reveal delay-2">
             <img src="./images/1605397.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
           </article>
+
+        </div>
+        <br>
+        <br>
+
+        <div class="hero-buttons">
+          <a href="tel:0820216351" class="contact-btn">
+            <div class="icon-circle bg-phone">
+              <img src="./images/call.png" alt="Phone Icon" style="height: 50px;">
+            </div>
+            <div class="text-container">
+              <span class="title-text">ติดต่อเรา คลิก</span>
+              <span class="main-text">082-0216351</span>
+            </div>
+          </a>
+
+          <a href="https://lin.ee/PLEAkM5" target="_blank" class="contact-btn">
+            <div class="icon-circle bg-line">
+              <img src="./images/line.png" alt="Line Icon" style="height: 50px;">
+            </div>
+            <div class="text-container">
+              <span class="title-text">Line คลิก</span>
+              <span class="main-text">@909ksqmg</span>
+            </div>
+          </a>
+
+          <a href="tel:064-3294567" class="contact-btn">
+            <div class="icon-circle bg-phone">
+              <img src="./images/telephone1.png" alt="Phone Icon" style="height: 50px;">
+            </div>
+            <div class="text-container">
+              <span class="title-text">สำรอง คลิก</span>
+              <span class="main-text">064-3294567</span>
+            </div>
+          </a>
+
         </div>
       </div>
     </section>
 
-    <section class="quote-section">
-      <div class="container quote-card reveal">
-        <div class="quote-mark">“</div>
-        <blockquote>SCF Transport ดูแลการขนส่งของเราได้ตรงเวลาและเป็นมืออาชีพ ทีมงานติดตามงานรวดเร็ว
-          ทำให้เราวางแผนธุรกิจได้อย่างมั่นใจ</blockquote>
-        <div class="quote-person"><span>สก</span>
-          <div><strong>สมชาย เกียรติวัฒนา</strong><small>ผู้จัดการฝ่ายโลจิสติกส์</small></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section pricing" id="pricing">
-      <div class="container">
+    <section class="section" id="about">
+      <div class="container quote-card reveal" style="background: #021F61;">
         <div class="section-heading reveal">
-          <div class="eyebrow"><span></span> บริการที่เหมาะกับธุรกิจคุณ</div>
-          <h2>รองรับทุกความต้องการ<br>ด้านการขนส่ง</h2>
-          <p>ติดต่อทีมงานเพื่อประเมินราคาและวางแผนการขนส่งที่เหมาะสม</p>
+          <div class="eyebrow" style="color: #FE5B02;"><span></span> บริการที่คุณไว้วางใจได้</div>
+          <h2>เกี่ยวกับเรา
+            <hr
+              style="width: 80px; height: 4px; background: #FE5B02; border: none; margin: 15px auto 30px;  border-radius: 10px;">
+          </h2>
         </div>
-        <div class="pricing-grid">
-          <article class="price-card reveal">
-            <span class="plan">STANDARD DELIVERY</span>
-            <h3>รายเที่ยว</h3>
-            <p>สำหรับการจัดส่งทั่วไปและเที่ยวรถเฉพาะกิจ</p>
-            <a class="button button-outline" href="#contact">ขอประเมินราคา</a>
-            <ul>
-              <li>รถขนส่งหลายขนาด</li>
-              <li>ติดตามสถานะการจัดส่ง</li>
-              <li>หลักฐานยืนยันการส่งมอบ</li>
-            </ul>
-          </article>
-          <article class="price-card popular reveal delay-1">
-            <div class="popular-tag">สำหรับธุรกิจ</div><span class="plan">BUSINESS CONTRACT</span>
-            <h3>เหมารายเดือน</h3>
-            <p>สำหรับธุรกิจที่มีการขนส่งอย่างต่อเนื่อง</p>
-            <a class="button button-primary" href="#contact">ปรึกษาทีมงาน <span>→</span></a>
-            <ul>
-              <li>รถและพนักงานประจำโครงการ</li>
-              <li>วางแผนเส้นทางและรอบการจัดส่ง</li>
-              <li>รายงานและผู้ประสานงานเฉพาะ</li>
-            </ul>
-          </article>
+        <div class="quote-mark" style="color: #FE5B02;">“</div>
+        <blockquote style="font-size: large;">หากคุณลูกค้ากำลังวางแผนที่จะขนย้ายบ้าน ออฟฟิศ หรือขนย้ายอุปกรณ์สำนักงาน
+          ไม่ว่าจะเป็นการย้ายบ้าน
+          ย้ายหอพัก ย้ายคอนโด ย้ายสำนักงาน หรือขนส่งสินค้าทั่วไป เรามีบริการรถรับจ้างหลากหลายประเภทให้เลือกใช้
+          ไม่ว่าจะเป็นรถกระบะคอก กระบะตู้ทึบ รถ 4 ล้อจัมโบ้ รถ 6 ล้อ รถ 10 ล้อ หรือรถเฮี๊ยบ
+          บริการของเราพร้อมให้คุณใช้ได้ตลอด 24 ชั่วโมง ไม่จำกัดเวลา
+          พร้อมทีมงานมืออาชีพในการขนย้ายสิ่งของที่ทำงานร่วมกันอย่างเป็นทีม
+          มีความชำนาญในงานขนย้ายและเส้นทางทั่วกรุงเทพและประเทศไทย ดำเนินงานมานานหลายสิบปี เปิดบริการทุกวัน 24
+          ชั่วโมง พร้อมให้บริการทั่วกรุงเทพและทั่วประเทศ</blockquote>
+
+        <div class="hero-buttons">
+          <a href="tel:0820216351" class="contact-btn">
+            <div class="icon-circle bg-phone">
+              <img src="./images/call.png" alt="Phone Icon" style="height: 50px;">
+            </div>
+            <div class="text-container">
+              <span class="title-text">ติดต่อเรา คลิก</span>
+              <span class="main-text">082-0216351</span>
+            </div>
+          </a>
+
+          <a href="https://lin.ee/PLEAkM5" target="_blank" class="contact-btn">
+            <div class="icon-circle bg-line">
+              <img src="./images/line.png" alt="Line Icon" style="height: 50px;">
+            </div>
+            <div class="text-container">
+              <span class="title-text">Line คลิก</span>
+              <span class="main-text">@909ksqmg</span>
+            </div>
+          </a>
+
+          <a href="tel:064-3294567" class="contact-btn">
+            <div class="icon-circle bg-phone">
+              <img src="./images/telephone1.png" alt="Phone Icon" style="height: 50px;">
+            </div>
+            <div class="text-container">
+              <span class="title-text">สำรอง คลิก</span>
+              <span class="main-text">064-3294567</span>
+            </div>
+          </a>
+
         </div>
       </div>
     </section>
 
-    <section class="cta-section" id="contact">
-      <div class="container cta-card reveal">
-        <div><span class="eyebrow light"><span></span> พร้อมส่งสินค้าหรือยัง?</span>
-          <h2>ให้เราดูแล<br>ทุกเส้นทางของคุณ</h2>
+    <section class="section" id="contact">
+      <div class="container reveal">
+        <div class="section-heading reveal">
+          <div class="eyebrow" style="color: #FE5B02;"><span></span> บริการที่คุณไว้วางใจได้</div>
+          <h2>ติดต่อเรา
+            <hr
+              style="width: 80px; height: 4px; background: #FE5B02; border: none; margin: 15px auto 30px;  border-radius: 10px;">
+          </h2>
+        </div>
+        <div class="" style="color: #FE5B02;">“</div>
+
+
+        <div class="hero-buttons">
+          <a href="tel:0820216351" class="contact-btn">
+            <div class="icon-circle bg-phone">
+              <img src="./images/call.png" alt="Phone Icon" style="height: 50px;">
+            </div>
+            <div class="text-container">
+              <span class="title-text">ติดต่อเรา คลิก</span>
+              <span class="main-text">082-0216351</span>
+            </div>
+          </a>
+
+          <a href="https://lin.ee/PLEAkM5" target="_blank" class="contact-btn">
+            <div class="icon-circle bg-line">
+              <img src="./images/line.png" alt="Line Icon" style="height: 50px;">
+            </div>
+            <div class="text-container">
+              <span class="title-text">Line คลิก</span>
+              <span class="main-text">@909ksqmg</span>
+            </div>
+          </a>
+
+          <a href="tel:064-3294567" class="contact-btn">
+            <div class="icon-circle bg-phone">
+              <img src="./images/telephone1.png" alt="Phone Icon" style="height: 50px;">
+            </div>
+            <div class="text-container">
+              <span class="title-text">สำรอง คลิก</span>
+              <span class="main-text">064-3294567</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <footer style="background: #021F61;color: white;">
+      <div class="container footer-grid">
+        <div><a class="logo" href="#"><img src="./images/logo1.png" alt="SCF Transport Logo" class="logo-img"><span>SWN
+              TRANSPORT</span></a><br>
+          <p style="color: white; font-size: 14px;">บริการขนส่งสินค้าทั่วประเทศ<br>รวดเร็ว ปลอดภัย และตรงเวลา</p>
+        </div>
+        <div><strong style="font-size: larger;">บริการของเรา</strong><a href="#features"
+            style="font-size: 14px;">ประเภทรถรับจ้าง</a><a href="#workflow" style="font-size: 14px;">ผลงานของเรา</a><a
+            href="#about" style="font-size: 14px;">เกี่ยวกับเรา</a>
+        </div>
+        <div><strong style="font-size: larger;">รับข่าวสารจากเรา</strong>
+          <p style="font-size: 14px;">ข่าวสารและข้อมูลด้านการขนส่ง ส่งตรงถึงคุณ</p>
+          <form><input type="email" placeholder="อีเมลของคุณ" aria-label="อีเมล"><button type="submit">→</button></form>
         </div>
         <div>
-          <p>แจ้งรายละเอียดต้นทาง ปลายทาง และประเภทสินค้า ทีม SCF Transport พร้อมให้คำแนะนำและประเมินราคา</p><a
-            class="button button-light" href="mailto:contact@scftransport.com">ติดต่อ SCF Transport <span>→</span></a>
+          <img src="./images/lineadd.png" style="width: 60%;">
         </div>
       </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-grid">
-      <div><a class="logo" href="#"><span class="logo-mark">S</span><span>SCF TRANSPORT</span></a>
-        <p>บริการขนส่งสินค้าทั่วประเทศ<br>รวดเร็ว ปลอดภัย และตรงเวลา</p>
+      <div class="container footer-bottom"><span>© 2026 SCF Transport. All rights reserved.</span>
+        <div><a href="#">ความเป็นส่วนตัว</a><a href="#">เงื่อนไข</a></div>
       </div>
-      <div><strong>บริการของเรา</strong><a href="#features">จุดเด่น</a><a href="#pricing">บริการขนส่ง</a><a
-          href="#workflow">ขั้นตอนบริการ</a></div>
-      <div><strong>บริษัท</strong><a href="#">เกี่ยวกับเรา</a><a href="#">ร่วมงานกับเรา</a><a href="#">ติดต่อเรา</a>
-      </div>
-      <div><strong>รับข่าวสารจากเรา</strong>
-        <p>ข่าวสารและข้อมูลด้านการขนส่ง ส่งตรงถึงคุณ</p>
-        <form><input type="email" placeholder="อีเมลของคุณ" aria-label="อีเมล"><button type="submit">→</button></form>
-      </div>
-    </div>
-    <div class="container footer-bottom"><span>© 2026 SCF Transport. All rights reserved.</span>
-      <div><a href="#">ความเป็นส่วนตัว</a><a href="#">เงื่อนไข</a></div>
-    </div>
-  </footer>
-  <script src="script.js"></script>
+    </footer>
+    <script src="script.js"></script>
 </body>
 
 <script>
