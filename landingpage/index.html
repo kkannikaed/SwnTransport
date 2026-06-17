@@ -8,7 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="SWN Transport บริการขนส่งสินค้าทั่วประเทศ รวดเร็ว ปลอดภัย และติดตามสถานะได้ตลอดเส้นทาง">
-  <title>SWN Transport — รถรับจ้าง</title>
+  <title>รถรับจ้าง ขนของย้ายบ้าน - เสาวีนีย์ขนส่ง</title>
+  <link rel="icon" type="image/png" href="./images/logo1.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -320,7 +321,7 @@
 
     /* สไตล์ของตัวปุ่มแต่ละปุ่ม (ทำตามรูปแบบในภาพ) */
     .hero-budius ul li {
-      color: #ffffff;
+      color: #021F61;
       font-family: 'Kanit', sans-serif;
       font-size: 12px;
       font-weight: 500;
@@ -333,7 +334,7 @@
       border: 1.5px solid rgba(255, 255, 255, 0.8);
 
       /* พื้นหลังโปร่งแสงผสมสีขาวเล็กน้อยเพื่อให้กลืนกับพื้นหลังเขียว */
-      background-color: rgba(255, 255, 255, 0.12);
+      background-color: rgba(255, 255, 255, 0.50);
 
       white-space: nowrap;
       /* ป้องกันไม่ให้ข้อความในปุ่มตัดขึ้นบรรทัดใหม่ */
@@ -452,6 +453,38 @@
       transform: scale(1.05);
     }
 
+    .hero-section {
+      position: relative;
+      min-height: 100vh;
+
+      background-image: url('./images/banner.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 80px 20px;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg,
+          rgba(3, 44, 136, .85),
+          rgba(254, 91, 2, .55));
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      text-align: center;
+      color: #fff;
+    }
+
     /* Tablet */
     @media (max-width: 991px) {
       .feature-grid {
@@ -543,6 +576,10 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
+      .top-bar {
+        display: none;
+      }
+
     }
 
     @media (max-width: 576px) {
@@ -597,7 +634,7 @@
   </header>
 
   <main>
-    <section class="hero-section" id="hero">
+    <!-- <section class="hero-section" id="hero">
       <div class="hero-left">
 
         <div class="hero-content" style="text-align: center;">
@@ -664,15 +701,76 @@
       <div class="hero-right">
         <img src="./images/logo.png" alt="SWN Transport">
       </div>
+    </section> -->
+
+    <section class="hero-section" id="hero">
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <span class="hero-badge">
+          - เสาวนีย์ ขนส่ง -
+        </span>
+
+        <h1 style="color: white;">
+          เสาวนีย์ขนส่ง รถรับจ้าง บริการรถรับจ้างทั่วไป
+          รับขนย้ายสิ่งของ ย้ายที่พัก และขนย้ายออฟฟิศ
+        </h1>
+
+        <div class="hero-budius">
+          <ul>
+            <li>กระบะ / ตู้ทึบ</li>
+            <li>กระบะ / คอก & คอกเพลาลอย</li>
+            <li>4 ล้อ / ตู้จัมโบ้ & 4 ล้อใหญ่</li>
+            <li>4 ล้อ / คอกจัมโบ้ & 4 ล้อใหญ่</li>
+            <li>6 ล้อ / ตู้ สิบบาน & เปิดข้าง</li>
+            <li>6 ล้อ / เจี๊ยบ & เครนยก</li>
+            <li>10 ล้อ / คอก ผ้าใบ</li>
+            <li>เทเลอร์ / พื้นเรียบ</li>
+          </ul>
+        </div>
+
+        <div class="hero-buttons">
+          <a href="tel:0820216351" class="contact-btn">
+            <div class="icon-circle bg-phone">
+              <img src="./images/call.png" alt="Phone Icon" style="height: 50px;">
+            </div>
+            <div class="text-container">
+              <span class="title-text">ติดต่อเรา คลิก</span>
+              <span class="main-text">082-0216351</span>
+            </div>
+          </a>
+
+          <a href="https://lin.ee/PLEAkM5" target="_blank" class="contact-btn">
+            <div class="icon-circle bg-line">
+              <img src="./images/line.png" alt="Line Icon" style="height: 50px;">
+            </div>
+            <div class="text-container">
+              <span class="title-text">Line คลิก</span>
+              <span class="main-text">@909ksqmg</span>
+            </div>
+          </a>
+
+        </div>
+        <br>
+
+        <div class="hero-buttons-center">
+          <a href="tel:064-3294567" class="contact-btn">
+            <div class="icon-circle bg-phone">
+              <img src="./images/telephone1.png" alt="Phone Icon" style="height: 50px;">
+            </div>
+            <div class="text-container">
+              <span class="title-text">สำรอง คลิก</span>
+              <span class="main-text">064-3294567</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
     </section>
 
-    <!-- <section class="trusted">
-      <div class="container">
-        <p>รองรับการขนส่งหลากหลายอุตสาหกรรม</p>
-        <div class="logo-cloud"><span>RETAIL</span><span>FACTORY</span><span>E-COMMERCE</span><span>◆
-            FMCG</span><span>CONSTRUCTION</span></div>
-      </div>
-    </section> -->
+
+
 
     <section class="section" id="features">
       <div class="container">
@@ -682,7 +780,7 @@
             <h2>ประเภทรถรับจ้าง<br><em style="color: #032C88;">ขนของย้ายบ้าน</em></h2>
             <hr
               style="width: 80px; height: 4px; background: #FE5B02; border: none; margin: 15px auto 30px;  border-radius: 10px;">
-            <!-- <div style=" border: 2px solid #032C88; border-radius: 16px; padding: 24px;">
+            <div style=" border: 2px solid #032C88; border-radius: 16px; padding: 24px;">
               <p>
                 หากคุณลูกค้ากำลังวางแผนที่จะขนย้ายบ้าน ออฟฟิศ หรือขนย้ายอุปกรณ์สำนักงาน ไม่ว่าจะเป็นการย้ายบ้าน
                 ย้ายหอพัก ย้ายคอนโด ย้ายสำนักงาน หรือขนส่งสินค้าทั่วไป เรามีบริการรถรับจ้างหลากหลายประเภทให้เลือกใช้
@@ -691,7 +789,7 @@
                 พร้อมทีมงานมืออาชีพในการขนย้ายสิ่งของที่ทำงานร่วมกันอย่างเป็นทีม
                 มีความชำนาญในงานขนย้ายและเส้นทางทั่วกรุงเทพและประเทศไทย ดำเนินงานมานานหลายสิบปี เปิดบริการทุกวัน 24
                 ชั่วโมง พร้อมให้บริการทั่วกรุงเทพและทั่วประเทศ</p>
-            </diV> -->
+            </diV>
 
           </div>
           <div class="feature-grid">
@@ -798,31 +896,92 @@
             <hr
               style="width: 80px; height: 4px; background: #FE5B02; border: none; margin: 15px auto 30px;  border-radius: 10px;">
           </h2>
+
           <p style="color: #000000;">รับขนย้ายสิ่งของ ย้ายที่พัก และขนย้ายออฟฟิศ</p>
         </div>
         <div class="feature-grid">
           <article class=" reveal">
-            <img src="./images/101837.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
+            <img src="./images/7049_0.jpg" class="feature-image">
           </article>
 
           <article class=" featured reveal delay-1">
-            <img src="./images/830593.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
+            <img src="./images/92457_0.jpg" class="feature-image">
           </article>
 
           <article class=" reveal delay-2">
-            <img src="./images/831409.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
+            <img src="./images/92494_0.jpg" class="feature-image">
           </article>
 
           <article class=" reveal delay-2">
-            <img src="./images/1605395.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
+            <img src="./images/101837_0.jpg" class="feature-image">
           </article>
 
           <article class=" reveal delay-2">
-            <img src="./images/1605396.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
+            <img src="./images/101848_0.jpg" class="feature-image">
           </article>
 
           <article class=" reveal delay-2">
-            <img src="./images/1605397.jpg" alt="บริการขนส่งที่ครอบคลุม" class="feature-image">
+            <img src="./images/101850_0.jpg" class="feature-image">
+          </article>
+
+          <article class=" reveal delay-2">
+            <img src="./images/101852_0.jpg" class="feature-image">
+          </article>
+
+          <article class=" reveal delay-2">
+            <img src="./images/529662_0.jpg" class="feature-image">
+          </article>
+
+          <article class=" reveal delay-2">
+            <img src="./images/529849_0.jpg" class="feature-image">
+          </article>
+
+          <article class=" reveal delay-2">
+            <img src="./images/529850_0.jpg" class="feature-image">
+          </article>
+
+          <article class=" reveal delay-2">
+            <img src="./images/830593_0.jpg" class="feature-image">
+          </article>
+
+          <article class=" reveal delay-2">
+            <img src="./images/831409_0.jpg" class="feature-image">
+          </article>
+
+          <article class=" reveal delay-2">
+            <img src="./images/1605395_0.jpg" class="feature-image">
+          </article>
+
+          <article class=" reveal delay-2">
+            <img src="./images/1605396_0.jpg" class="feature-image">
+          </article>
+
+          <article class=" reveal delay-2">
+            <img src="./images/1605397_0.jpg" class="feature-image">
+          </article>
+
+          <article class=" reveal delay-2">
+            <img src="./images/1605398_0.jpg" class="feature-image">
+          </article>
+
+          <article class=" reveal delay-2">
+            <img src="./images/1605414_0.jpg" class="feature-image">
+          </article>
+
+          <article class=" reveal delay-2">
+            <img src="./images/1605415_0.jpg" class="feature-image">
+          </article>
+
+          <article class=" reveal delay-2">
+            <img src="./images/2715607_0.jpg" class="feature-image">
+          </article>
+
+          <article class=" reveal delay-2">
+            <img src="./images/2715609_0.jpg" class="feature-image">
+          </article>
+
+          <article class=" reveal delay-2">
+            <img src="./images/2715610_0.jpg" class="feature-image">
           </article>
 
         </div>
@@ -865,7 +1024,8 @@
     </section>
 
     <section class="section" id="about">
-      <div class="container quote-card reveal" style="background: #021F61;">
+      <div class="container">
+        <!-- <div class="container quote-card reveal"></div> -->
         <div class="section-heading reveal">
           <div class="eyebrow" style="color: #FE5B02;"><span></span> บริการที่คุณไว้วางใจได้</div>
           <h2>เกี่ยวกับเรา
@@ -873,15 +1033,32 @@
               style="width: 80px; height: 4px; background: #FE5B02; border: none; margin: 15px auto 30px;  border-radius: 10px;">
           </h2>
         </div>
-        <div class="quote-mark" style="color: #FE5B02;">“</div>
-        <blockquote style="font-size: large;">หากคุณลูกค้ากำลังวางแผนที่จะขนย้ายบ้าน ออฟฟิศ หรือขนย้ายอุปกรณ์สำนักงาน
-          ไม่ว่าจะเป็นการย้ายบ้าน
-          ย้ายหอพัก ย้ายคอนโด ย้ายสำนักงาน หรือขนส่งสินค้าทั่วไป เรามีบริการรถรับจ้างหลากหลายประเภทให้เลือกใช้
-          ไม่ว่าจะเป็นรถกระบะคอก กระบะตู้ทึบ รถ 4 ล้อจัมโบ้ รถ 6 ล้อ รถ 10 ล้อ หรือรถเฮี๊ยบ
-          บริการของเราพร้อมให้คุณใช้ได้ตลอด 24 ชั่วโมง ไม่จำกัดเวลา
-          พร้อมทีมงานมืออาชีพในการขนย้ายสิ่งของที่ทำงานร่วมกันอย่างเป็นทีม
-          มีความชำนาญในงานขนย้ายและเส้นทางทั่วกรุงเทพและประเทศไทย ดำเนินงานมานานหลายสิบปี เปิดบริการทุกวัน 24
-          ชั่วโมง พร้อมให้บริการทั่วกรุงเทพและทั่วประเทศ</blockquote>
+        <div class="quote-mark" style="color: #FE5B02; text-align: center;">“</div>
+
+        <blockquote>
+          <p style="    font-weight: 600;text-align: center;color: #021F61;">บริษัทของเราให้บริการด้านการขนส่งสินค้า
+            มีทั้งรถสำหรับขนของและรถรับจ้าง
+            เพื่อรองรับความต้องการของลูกค้าทั่วทุกภูมิภาคในประเทศ</p><br>
+
+          <p style="font-size: 14px;text-align: center;">บริษัทของเรามีบริการรถขนส่งสินค้าและรถรับจ้างทั่วประเทศไทย
+            รองรับการขนส่งแบบเหมาทริปเพื่อตอบสนองความต้องการของลูกค้าทุกท่านอย่างครบวงจร จักราวุธรถรับจ้าง
+            มุ่งมั่นที่จะให้บริการขนส่งที่มีคุณภาพ ด้วยความเข้าใจในบทบาทสำคัญของระบบโลจิสติกส์
+            ซึ่งเป็นหัวใจสำคัญในการขับเคลื่อนเศรษฐกิจ
+            เนื่องจากทุกผลิตภัณฑ์ต้องพึ่งพาระบบขนส่งในการส่งต่อสินค้าสู่ผู้บริโภคอย่างรวดเร็วและมีต้นทุนที่เหมาะสม
+            เราจึงยึดหลักการให้บริการที่คุ้มค่า โปร่งใส และเป็นธรรม เพื่อให้ธุรกิจของลูกค้าสามารถแข่งขันได้ในระดับประเทศ
+            ด้วยเหตุนี้เอง เราจึงได้รับความไว้วางใจจากลูกค้าประจำหลายรายที่เลือกใช้บริการขนส่งสินค้ากับจักราวุธรถรับจ้าง
+            อย่างต่อเนื่อง</p><br>
+
+          <p style="    font-weight: 600;text-align: center;color: #021F61;">การตรงต่อเวลา ของบริษัทขนส่งสินค้า</p><br>
+
+          <p style="font-size: 14px;text-align: center;">ในธุรกิจขนส่งสินค้า
+            ความตรงต่อเวลาในการให้บริการเป็นปัจจัยสำคัญที่สุด
+            เนื่องจากลูกค้าส่วนใหญ่คาดหวังว่าสินค้าจะถึงปลายทางอย่างรวดเร็วและทันตามเวลานัดหมาย
+            การเลือกใช้บริการจากผู้ให้บริการที่มีความน่าเชื่อถือและมีประสบการณ์จึงเป็นสิ่งที่ลูกค้าควรพิจารณาเป็นพิเศษ
+            จักราวุธรถรับจ้าง เข้าใจถึงความต้องการนี้เป็นอย่างดี และไม่เคยผิดนัดลูกค้า
+            เพราะเรามีการวางแผนงานล่วงหน้าและจัดตารางงานขนของให้อยู่ในขอบเขตที่สามารถบริหารจัดการได้อย่างมีประสิทธิภาพ
+            เพื่อให้การขนส่งเป็นไปตามเวลาที่ตกลง พร้อมทั้งมอบความมั่นใจให้กับลูกค้าทุกครั้งที่ใช้บริการของเรา</p>
+        </blockquote><br>
 
         <div class="hero-buttons">
           <a href="tel:0820216351" class="contact-btn">
@@ -926,9 +1103,43 @@
             <hr
               style="width: 80px; height: 4px; background: #FE5B02; border: none; margin: 15px auto 30px;  border-radius: 10px;">
           </h2>
+          <p>เสาวนีย์ขนส่ง มีนโยบายสนับสนุนพัฒนาคุณภาพของพนักงานให้มีความเข้าใจและรักงานบริการ ทำงานร่วมกันเป็นทีม
+            มีความเป็นมืออาชีพในด้านการขนย้ายสิ่งของ, ขนย้ายบ้าน, ขนย้ายหอพัก, ขนย้ายคอนโด, ขนย้ายสำนักงาน,
+            ขนย้ายโกดังสินค้า, ขนส่งสินค้าทั่วไป ฯลฯ รถรับจ้างขนของ รถขนของกรุงเทพไปทั่วประเทศไทย เปิดบริการทุกวัน 24
+            ชั่วโมง</p>
         </div>
-        <div class="" style="color: #FE5B02;">“</div>
 
+        <div class="container">
+          <div class="row align-items-center">
+
+            <!-- ซ้าย -->
+            <div class="col-lg-6 mb-4 mb-lg-0">
+              <img src="./images/logo.png" style="    width: 40%;">
+              <p> เสาวนีย์ขนส่ง รถรับจ้าง บริการรถรับจ้าง 4-6-10 ล้อ <br>ขนของ ขนย้ายสินค้า ทั่วประเทศ รถรับจ้าง
+                24ชม.(ไม่ติดเวลา)</p><br>
+
+              <p style="margin-bottom: -5px;"><img src="./images/map.png" style="height: 25px;"> 67 ม.22 ต.หัวขวาง
+                อ.โกสุมพิสัย
+                จ.มหาสารคาม 44140 </p><br>
+              <p style="margin-bottom: -5px;"><img src="./images/call.png" style="height: 25px;"> 082-0216351</p> <br>
+              <p style="margin-bottom: -5px;"><img src="./images/line.png" style="height: 25px;"> @909ksqmg</p> <br>
+              <p style="margin-bottom: -5px;"><img src="./images/telephone1.png" style="height: 25px;"> 064-3294567
+                (สำรอง)</p>
+
+            </div>
+
+            <!-- ขวา -->
+            <div class="col-lg-6">
+              <iframe id="branchMap" width="100%" height="400" style="border:0; border-radius:16px;" loading="lazy"
+                allowfullscreen
+                src="https://maps.google.com/maps?q=16.246697124142532,103.07050516151521&z=15&output=embed">
+              </iframe>
+            </div>
+
+          </div>
+        </div>
+        <br>
+        <br>
 
         <div class="hero-buttons">
           <a href="tel:0820216351" class="contact-btn">
@@ -967,8 +1178,8 @@
 
     <footer style="background: #021F61;color: white;">
       <div class="container footer-grid">
-        <div><a class="logo" href="#"><img src="./images/logo1.png" alt="SCF Transport Logo" class="logo-img"><span>SWN
-              TRANSPORT</span></a><br>
+        <div><a class="logo" href="#"><img src="./images/logo1.png" alt="SCF Transport Logo"
+              class="logo-img"><span>เสาวนีย์ ขนส่ง</span></a><br>
           <p style="color: white; font-size: 14px;">บริการขนส่งสินค้าทั่วประเทศ<br>รวดเร็ว ปลอดภัย และตรงเวลา</p>
         </div>
         <div><strong style="font-size: larger;">บริการของเรา</strong><a href="#features"
